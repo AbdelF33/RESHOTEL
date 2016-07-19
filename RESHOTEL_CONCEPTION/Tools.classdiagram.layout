@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Tools">
+  <logicalClassDesignerModelMoniker Id="e98d7d74-b5b2-4e22-98fb-40c8d0b14cdd" />
+  <nestedChildShapes>
+    <classShape Id="27249aa2-845d-4718-b293-4da0f495bd11" absoluteBounds="0.5, 0.625, 1.5, 2.4690855797131861" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="fd75a0e9-b793-4488-b316-8408aead6edd" LastKnownName="LoginController" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="a348e861-3f45-48f7-bc84-f3a90756b276" absoluteBounds="0.515, 1.1403356393178306, 1.4700000000000002, 1.162109337747097" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="48aedfee-3816-4307-b6d6-33ffb9cfae3e" absoluteBounds="0.515, 2.3124449770649278, 1.4700000000000002, 0.68164060264825843" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33db4bb1-6eab-4481-8036-9f6277d39a54" absoluteBounds="2.875, 0.875, 1.5, 1.8284605995814007" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="e8287674-d934-4123-82f4-d9dfa00db0c6" LastKnownName="Mail" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="51bc9faf-09b5-4492-a580-fdbc283fe183" absoluteBounds="2.89, 1.3903356393178306, 1.4700000000000002, 0.52148435761531176" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="cc399811-73b3-4445-9030-edaf3ede0ce2" absoluteBounds="2.89, 1.9218199969331422, 1.4700000000000002, 0.68164060264825821" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

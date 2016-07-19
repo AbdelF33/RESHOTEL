@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e6ad5421-da40-4e1b-a832-94da280befa2"
+  name="Tools"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="13b3c35c-6ac6-4652-9d2a-db19f8737b1e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRESHOTEL_APP.Tools"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e75d917b-c676-4c7f-b054-fcaade5a9cc2"
+        name="Mail"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="251b6737-ec9d-4884-9d0a-f6e513fbc92c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7cba8845-4c45-4794-95cd-5875244e4584"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16cd6955-728f-40f8-9467-e27aae76bdf7">
+                <propertyInstance
+                  Id="30ba32aa-72ed-41ba-8c3b-19095a6e9dcb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df63ac24-81a0-450f-8437-3d82b3711155">
+                <propertyInstance
+                  Id="96f73817-4426-4438-b53f-179198c9bed0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="81d2b062-b167-44a4-984b-4d7d49369d9d">
+                <propertyInstance
+                  Id="a1aad65c-ebda-46f3-a586-bb2134b08f3d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d7e7dbf1-2f51-4b08-be8f-97be90e71824">
+                <propertyInstance
+                  Id="cb6d0e41-7614-48c5-90c4-b5c8f0e78eea"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0031a4f-93a4-431f-81fb-1d17b481ca97">
+                <propertyInstance
+                  Id="a3e69da4-605d-4c55-8208-1b85bff700cf"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d1bb042a-31fd-47dc-9bd6-18aac0405ee8"
+            name="mailClient"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="24e9cf2c-621d-407b-ac8e-4c76d47548a5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3DmailClient"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9e03ca35-1c9d-4a0f-a72d-ddca7688cf8f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40cebf6b-eaab-432e-adc5-65761c9c986f">
+                    <propertyInstance
+                      Id="2a4e2d65-d5fc-4740-806b-1381db781355"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4cc17a1-956e-44d4-b5be-1619d1eb8b96">
+                    <propertyInstance
+                      Id="154835ec-fbaf-4d4a-8525-b12d77aa52c8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f2ee87c-0952-42eb-8986-27b75116f2f4">
+                    <propertyInstance
+                      Id="0ac218e4-cfb4-4071-8377-fb8505435968"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f603a74-a0e9-4722-a2ab-a5299f8ce2bd">
+                    <propertyInstance
+                      Id="7e129591-49a8-4acb-aad7-8883560f5c85"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="868c47af-92f6-46a2-b1e9-153cdf845b0b">
+                    <propertyInstance
+                      Id="6b1264b6-2bf6-427c-938a-d75d5df8a0fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="292bf5dc-6682-4cd2-8cf0-66db610b54dd"
+                LastKnownName="SmtpClient"
+                LastKnownLocation="Package2_0027.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="12cd257c-9125-4219-bcdf-94ba4d673c89"
+            name="message"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0a09c00e-2797-497b-82a7-d3351ef30c1b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3Dmessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ee96033b-71b6-4408-978c-1a46d84c7622"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b6cf676-3a15-443a-a3ce-88288dc61b7d">
+                    <propertyInstance
+                      Id="caee559f-00a7-4a64-b1e9-7a2cd89e0aa5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d34d6827-29d4-47f8-a7ad-8fbaa614c981">
+                    <propertyInstance
+                      Id="d555728c-7cfc-412d-afec-a12bfd043876"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1665c00-2a9c-4c83-9ed2-a59148511552">
+                    <propertyInstance
+                      Id="54fee40d-0135-4b54-8b7a-dc3d52b1820f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23a4c219-b8e0-4104-90e9-aded4bbe6e35">
+                    <propertyInstance
+                      Id="41f219ee-d1f4-4c63-9fa2-44c541438f00"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd56de69-ffc5-4bef-8d4f-58d25c651c71">
+                    <propertyInstance
+                      Id="f00a7de0-2fc6-442c-b79c-0cbb394f9051"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="48c52581-67e4-4a31-b3ee-4792618d22c7"
+                LastKnownName="MailMessage"
+                LastKnownLocation="Package2_0027.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c4fad252-0352-436e-bb49-393e59231964"
+            name="errorMail"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b07a95d1-77fa-4c12-b951-18c4e1a81922"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D(Name%3DerrorMail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9f6dbaf6-d6ec-49d1-a7d2-b7089c7fd6a8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9be7929-09ec-4d98-97dd-5cfb9fbae710">
+                    <propertyInstance
+                      Id="7abfb79e-7a4a-46f4-8e14-ed918a024537"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d437c9f8-02b5-439b-a602-80fbe94b1d95">
+                    <propertyInstance
+                      Id="edd72525-98dc-4f16-b930-f0babd47e319"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95b9618f-e9e0-416e-add2-7ac59e3fbac3">
+                    <propertyInstance
+                      Id="96f078f3-3890-4c2d-ad36-1d4070070058"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="610a087e-0e79-4be6-885b-d8cfa438ba1d">
+                    <propertyInstance
+                      Id="ad51e364-5ae8-41d4-af2d-37b7bd341cfb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cdcbb574-30be-44a3-a196-7fe615f01947">
+                    <propertyInstance
+                      Id="d5fa16d8-2a6a-4b54-a4f8-825a44e981ec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc034c13-96e6-4f91-84be-3c059a2a9f0f">
+                    <propertyInstance
+                      Id="ce0113a3-23c7-49c6-beb6-fbc497eb06cc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cfb82595-5a74-4f70-8fbe-30bfb48eaa55"
+                  name="_message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="33af30f2-c9ec-4251-b127-cc3683cf1bf9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D(Name%3DerrorMail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3D_message"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RESHOTEL_CONCEPTION.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="86489733-7130-4721-b73d-12eafbb0f082"
+                  name="_details"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="58a06f63-eddc-42ac-8b86-0cbb86a11bdc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D(Name%3DerrorMail OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3D_details"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="RESHOTEL_CONCEPTION.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ac04d755-0393-44a0-9093-50e1c533ab4c"
+            name="nbRoomAlert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="445dc10a-1902-4738-8269-40524be60d3f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D(Name%3DnbRoomAlert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c6f9e277-de57-4c3f-ba3c-a794b1f90ba1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f382c15-fdc2-430b-a724-5a6b52e5312b">
+                    <propertyInstance
+                      Id="1f7fdd78-53a2-4e80-bef4-1d1a78138a3c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9070f353-e4da-46ae-8b5e-3788f3fd47d2">
+                    <propertyInstance
+                      Id="792e1cf1-d6e9-416c-9c93-06f3db07e29f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e4145cd-ee8c-4d79-b48c-6165da21bbf8">
+                    <propertyInstance
+                      Id="ff396181-bd53-4304-a898-5f4998b84b90"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a71daa2e-19e2-4c22-9b91-5b0e104874e5">
+                    <propertyInstance
+                      Id="9ea2d5a4-bfa8-4043-b719-a58bd981e4aa"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f10af687-4af8-4022-bf97-d9aeb34ac496">
+                    <propertyInstance
+                      Id="a2740bfa-0e3d-40c8-aced-73acf194de1b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="057043ca-196e-4c84-835f-f12f6abf2eed">
+                    <propertyInstance
+                      Id="db1f17c3-e277-492d-bbf8-18ae46600e51"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0c242df-0a72-4c21-9cc9-9cdcb8cc352c"
+                  name="_checkIn"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a6b5cec1-f8ec-4d92-a37c-b786dca48e61"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D(Name%3DnbRoomAlert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3D_checkIn"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d227cbd7-1a5f-47fe-ad5c-d1e5cd6dd834"
+                      LastKnownName="DateTime"
+                      LastKnownLocation="Package2_0018.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bbcb4233-562a-41fe-a679-eb893aea2c05"
+            name="Mail"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8951707c-f713-4157-9286-34c0038c2b19"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP.Tools Type%3DMail Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="88ad37a3-812d-4399-81a6-12f0e6219236"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31f3c3f9-d0e4-40cd-b96c-6e3a3fc859dc">
+                    <propertyInstance
+                      Id="efb36bdb-4b7b-4c54-8b20-e763044031d6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31a23356-5c75-4a51-adc6-4124ef136fd0">
+                    <propertyInstance
+                      Id="50eb102e-2516-4cce-964d-dbd9d742af3e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="337b1372-c67b-4216-adce-527bd1da47b6">
+                    <propertyInstance
+                      Id="71581428-0018-47ff-b6aa-bea8ec209cd5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ab43e58-8560-4825-9f99-d63af0446c35">
+                    <propertyInstance
+                      Id="6283c515-bbe6-47c2-9b8a-85a3334a7844"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b1feaab-547d-4cb1-ae15-1fe12bcc4fb1">
+                    <propertyInstance
+                      Id="941f1b5a-8cb1-452f-b056-bbe3dad3b4da"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c894f29-2696-4ebf-80e9-f86747a84772">
+                    <propertyInstance
+                      Id="6d19da7f-2559-4b89-a066-aa9274a832d5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,714 @@
+﻿<Window x:Name="hbWindow1" x:Class="RESHOTEL_APP.View.hbWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tableau de bord" Height="650" Width="900" 
+        Icon="/RESHOTEL_APP;component/Images/reshotel_Icone.ico"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Loaded="hbWindow1_Loaded">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/RESHOTEL_APP;component/Images/reception.jpg" Opacity="0.3"/>
+        </Grid.Background>
+
+        <Grid Name="gr_header" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160*"/>
+                <ColumnDefinition Width="170*"/>
+                <ColumnDefinition Width="67*"/>
+            </Grid.ColumnDefinitions>
+
+            <WrapPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2">
+                <Image Height="55" Width="50" Source="/RESHOTEL_APP;component/Images/reshotel.png" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Content="Bienvenue " FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Name="tbl_username" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2">
+
+            </WrapPanel>
+
+            <Button Grid.Column="2" Name="btn_logout" Foreground="White" Content="Se déconnecter" Click="btn_logout_Click" FontWeight="Bold" FontSize="13" Margin="10,12" Background="Red" BorderBrush="Red"/>
+
+        </Grid>
+
+        <Grid Name="gr_toolbar" Grid.Row="1">
+            <ToolBar>
+                <Button Name="btn_dashboard" Content="Tableau de Bord" Height="35.2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0" Padding="8,2" Click="btn_dashboard_Click"/>
+                <Button Name="btn_planning" Content="Planning des réservations" Click="btn_planning_Click" Height="35.2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0" Padding="8,2"/>
+                <Button Name="btn_Promotion" Content="Promotions" Click="btn_Promotion_Click" Visibility="Collapsed" Height="35.2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0" Padding="8,2"/>
+                <Button Name="btn_customer" Content="Gérer les clients" Height="35.2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0" Padding="8,2" Click="btn_customer_Click"/>
+            </ToolBar>
+        </Grid>
+
+        <Grid Name="gr_manager" Grid.Row="2">
+        </Grid>
+
+        <Grid Name="gr_dashboard" Grid.Row="3" Visibility="Visible" Margin="10,0,9.6,54" Grid.RowSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+              
+            <StackPanel Name="wp_booking" VerticalAlignment="Center" Visibility="Visible" Grid.Column="0">
+                <TextBlock Text="Date d'arrivée :"/>
+                <DatePicker Name="dp_checkin" Text="Date d'arrivée" Margin="20,20" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+                <TextBlock Text="Date de départ :"/>
+                <DatePicker Name="dp_checkout" Text="Date de départ" Margin="20,20" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+                <TextBlock Text="Type de chambre :"/>
+                <ComboBox Name="cb_roomType" Margin="20,20" Text="Type de chambre" SelectionChanged="cb_roomType_SelectionChanged">
+                    <ComboBoxItem Tag="1">Simple</ComboBoxItem>
+                    <ComboBoxItem Tag="2">Double</ComboBoxItem>
+                    <ComboBoxItem Tag="3">Triple</ComboBoxItem>
+                    <ComboBoxItem Tag="4">4 personnes</ComboBoxItem>
+                    <ComboBoxItem Tag="5">6 personnes</ComboBoxItem>
+                    <ComboBoxItem Tag="6">Avec lit bébé</ComboBoxItem>
+                    <ComboBoxItem Tag="7">Avec vue sur le CESI</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            
+            <Grid Grid.Column="1">
+
+                <ListBox Background="Transparent" Name="lb_rooms" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel Orientation="Horizontal">
+                                <Grid Margin="0,5,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding imageUrl}" Height="80" Width="80" Grid.Column="0"></Image>
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+                                        <!--<TextBlock Name="tb_roomId" Text="{Binding idRoom}" Visibility="Visible"/>-->
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Chambre N°" Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding number}" Margin="3,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Capacité :" Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding capacity}" Margin="5,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Etage N°" Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding floor}" Margin="5,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Prix :" Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding price1n}" Margin="3,1,0,1"></TextBlock>
+                                            <TextBlock Text="€" Margin="5,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="gr_planning" Grid.Row="3" Visibility="Hidden" Margin="10,0,9.6,54" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Name="wp_planning" Grid.Column="0" VerticalAlignment="Center"  Visibility="Visible">
+                <TextBlock Text="Du"/>
+                <DatePicker Name="dp_begin" Margin="20,10"/>
+                <TextBlock Text="Au"/>
+                <DatePicker Name="dp_end" Margin="20,10"/>
+                <TextBlock Text="Type de chambre "/>
+                <ComboBox Name="cb_bookRoomType" Margin="20,10" Text="Type de chambre" SelectionChanged="cb_bookRoomType_SelectionChanged">
+                    <ComboBoxItem Tag="1">Simple</ComboBoxItem>
+                    <ComboBoxItem Tag="2">Double</ComboBoxItem>
+                    <ComboBoxItem Tag="3">Triple</ComboBoxItem>
+                    <ComboBoxItem Tag="4">4 personnes</ComboBoxItem>
+                    <ComboBoxItem Tag="5">6 personnes</ComboBoxItem>
+                    <ComboBoxItem Tag="6">Avec lit bébé</ComboBoxItem>
+                    <ComboBoxItem Tag="7">Avec vue sur le CESI</ComboBoxItem>
+                </ComboBox>
+                <Button Name="btn_searchByDate" Content="Rechercher" Margin="20,10" Click="btn_searchByDate_Click"/>
+                <TextBlock Text="Recherche par client "/>
+                <TextBox Name="tb_searchByClient" Margin="20,10"/>
+                <Button Name="btn_searchByClient" Content="Rechercher" Margin="20,10" Click="btn_searchByClient_Click" />
+            </StackPanel>
+
+            <ListBox Background="Transparent" Name="lb_bookings" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel VerticalAlignment="Center">
+                            <Grid Margin="0,5,0,0">
+                                <StackPanel Height="100" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Réservation N° : " Margin="5,1,0,1"></TextBlock>
+                                        <TextBlock Name="tb_bookId" Text="{Binding bookId}" Visibility="Visible"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Date d'arrivée : " Margin="5,1,0,1"></TextBlock>
+                                        <TextBlock Text="{Binding checkIn}" Margin="5,1,0,1"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Date de départ : " Margin="5,1,0,1"></TextBlock>
+                                        <TextBlock Text="{Binding checkOut}" Margin="5,1,0,1"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Client : " Margin="5,1,0,1"></TextBlock>
+                                        <TextBlock Text="{Binding lastname}" Margin="3,1,0,1"></TextBlock>
+                                        <TextBlock Text="{Binding firstname}" Margin="3,1,0,1"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Numéro chambre : " Margin="5,1,0,1"></TextBlock>
+                                        <TextBlock Text="{Binding roomNb}" Margin="3,1,0,1"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+        <Grid Name="gr_newResa" Grid.Row="3" Loaded="gr_newRes_Loaded" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Name="gr_customer" Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="89*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Name="sp_srchCustomer" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="Rechercher un client" Margin="20,0"/>
+                    <WrapPanel>
+                        <TextBox Name="tb_searchClient"  Width="150" Margin="20,0,0,5"/>
+                        <Button Name="btn_searchClient" Width="29" Click="btn_searchClient_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/RESHOTEL_APP;component/Images/Search_16x16.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                    </WrapPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                    <CheckBox Name="chk_newCustomer" Margin="20,0,20,5" Click="chk_newCustomer_Click">Nouveau client</CheckBox>
+                </StackPanel>
+
+                <StackPanel Name="sp_customersList" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">
+                    <ListView x:Name="lv_customers" ItemsSource="{Binding Customer}" Height="150" ScrollViewer.VerticalScrollBarVisibility="Auto" IsSynchronizedWithCurrentItem="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding lastname}" Header="Nom" Width="90"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding firstname}" Header="Prénom" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+
+                <StackPanel Name="sp_newCustomer" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" IsEnabled="False">
+                    <TextBlock Text="Nom" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_lastname" Margin="20,0"/>
+                    <TextBlock Text="Prénom" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_firstname" Margin="20,0"/>
+                    <TextBlock Text="Email" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_email" Margin="20,0"/>
+                    <TextBlock Text="Téléphone" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_phone" Margin="20,0"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Name="gr_option" Grid.Row="0" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer Grid.Column="0" VerticalAlignment="Center" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Options supplémentaires" FontWeight="Bold" Margin="20,0,20,5"/>
+                        <CheckBox Tag="1" Name="chk_cardio">Espace Cardio (15€)</CheckBox>
+                        <CheckBox Tag="2" Name="chk_jacuzzi">Espace Jacuzzi/Hammam (15€)</CheckBox>
+                        <CheckBox Tag="3" Name="chk_wifi">Wi-Fi (20€)</CheckBox>
+                        <CheckBox Tag="4" Name="chk_tv">Télévision (10€)</CheckBox>
+                        <CheckBox Tag="5" Name="chk_tennis">Cours de Tennis (25€)</CheckBox>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="Type de paiement" Margin="20,0,20,10"/>
+                    <ComboBox Name="cb_payment" Margin="20,5"
+                              ItemsSource="{Binding Payment}"
+                              DisplayMemberPath="label"
+                              Tag="id"/>
+
+
+                    <TextBlock Text="Petit déjeuner" Margin="20,0,20,10"/>
+                    <ComboBox Name="cb_breakfast" Margin="20,5">
+                        <ComboBoxItem Tag="0">0</ComboBoxItem>
+                        <ComboBoxItem Tag="1">1</ComboBoxItem>
+                        <ComboBoxItem Tag="2">2</ComboBoxItem>
+                        <ComboBoxItem Tag="3">3</ComboBoxItem>
+                        <ComboBoxItem Tag="4">4</ComboBoxItem>
+                        <ComboBoxItem Tag="5">5</ComboBoxItem>
+                        <ComboBoxItem Tag="6">6</ComboBoxItem>
+                    </ComboBox>
+
+                    <TextBlock Text="Dîner" Margin="20,0,20,10"/>
+                    <ComboBox Name="cb_dinner" Margin="20,5">
+                        <ComboBoxItem Tag="0">0</ComboBoxItem>
+                        <ComboBoxItem Tag="1">1</ComboBoxItem>
+                        <ComboBoxItem Tag="2">2</ComboBoxItem>
+                        <ComboBoxItem Tag="3">3</ComboBoxItem>
+                        <ComboBoxItem Tag="4">4</ComboBoxItem>
+                        <ComboBoxItem Tag="5">5</ComboBoxItem>
+                        <ComboBoxItem Tag="6">6</ComboBoxItem>
+                    </ComboBox>
+
+                </StackPanel>
+
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="gr_mealDemand" Grid.Column="0" Visibility="Hidden">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Demande de repas supplémentaire" FontWeight="Bold" Margin="0,10"/>
+                        <TextBlock Text="Date du repas" Margin="10,0"/>
+                        <DatePicker Name="dp_dinnerDate" Margin="10,10"/>
+                        <TextBlock Text="Nombre de personne(s)" Margin="10,0"/>
+                        <ComboBox Name="cb_nbDinner" Margin="10,5">
+                            <ComboBoxItem Tag="1">1</ComboBoxItem>
+                            <ComboBoxItem Tag="2">2</ComboBoxItem>
+                            <ComboBoxItem Tag="3">3</ComboBoxItem>
+                            <ComboBoxItem Tag="4">4</ComboBoxItem>
+                            <ComboBoxItem Tag="5">5</ComboBoxItem>
+                            <ComboBoxItem Tag="6">6</ComboBoxItem>
+                        </ComboBox>
+                        <Button Name="btn_addMealValidate" Click="btn_addMealValidate_Click" Content="Ajouter repas" Margin="10"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Name="gr_room" Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <WrapPanel>
+                        <TextBlock Text="Arrivée :" Margin="10,0,5,5"/>
+                        <TextBlock Name="tb_checkIn" Margin="0,0,5,5"/>
+                        <DatePicker Name="dp_modifCheckin" Visibility="Collapsed"/>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock Text="Départ :" Margin="10,0,5,5"/>
+                        <TextBlock Name="tb_checkOut" Margin="0,0,5,5"/>
+                        <DatePicker Name="dp_modifCheckout" Visibility="Collapsed"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Chambre n°:" Margin="10,0,5,5"/>
+                        <TextBlock Name="lbl_roomNb" Margin="0,0,5,5"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Capacité :" Margin="10,0,5,5"/>
+                        <TextBlock Name="lbl_roomCapacity" Margin="0,0,5,5"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Etage n°:" Margin="10,0,5,5"/>
+                        <TextBlock Name="lbl_roomFloor" Margin="0,0,5,5"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Prix :" Margin="10,0,5,5"/>
+                        <TextBlock Name="lbl_roomPrice" Margin="0,0,5,5"/>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Nuitées :" Margin="10,0,5,5"/>
+                        <TextBlock Name="lbl_nbNights" Margin="0,0,5,5"/>
+                    </WrapPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                    <Button Name="btn_genRate" Content="Génerer les tarifs" Click="btn_genRate_Click" Margin="10,0"/>
+                    <StackPanel Name="sp_allPrices" Visibility="Hidden">
+                        <WrapPanel>
+                            <TextBlock Text="Prix total nuitées" Margin="10,5,5,5"/>
+                            <TextBlock Name="tbl_totalNightsPrice" FontWeight="Bold" Margin="0,5,5,5"/>
+                            <TextBlock Text="€" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Petit déjeuner" Margin="10,5,5,5"/>
+                            <TextBlock Name="tbl_totalBFPrice" FontWeight="Bold" Margin="0,5,5,5"/>
+                            <TextBlock Text="€" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Dîner" Margin="10,5,5,5"/>
+                            <TextBlock Name="tbl_totalDnrPrice" FontWeight="Bold" Margin="0,5,5,5"/>
+                            <TextBlock Text="€" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Total des options" Margin="10,5,5,5"/>
+                            <TextBlock Name="tbl_totalOptPrice" FontWeight="Bold" Margin="0,5,5,5"/>
+                            <TextBlock Text="€" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel Name="wp_discount" Visibility="Collapsed">
+                            <TextBlock Text="Réduction fidélité" Margin="10,5,5,5"/>
+                            <TextBlock Text="-5 %" Name="tbl_discount" FontWeight="Bold" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel Name="wp_tmpDiscount" Visibility="Collapsed">
+                            <TextBlock Text="Promotion temporaire" Margin="10,5,5,5"/>
+                            <TextBlock  Name="tbl_tmpDiscount" FontWeight="Bold" Margin="0,5,5,5"/>
+                            <TextBlock Text="%" Margin="0,5,5,5"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Text="Total à payer" Margin="10,10,5,5"/>
+                            <TextBlock Name="tbl_totalPrice" FontWeight="Bold" Margin="0,10,5,5"/>
+                            <TextBlock Text="€" Margin="0,10,5,5"/>
+                        </WrapPanel>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="gr_promo" Grid.Row="3" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190*"/>
+                <ColumnDefinition Width="449*"/>
+                <ColumnDefinition Width="254*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Name="gr_promoSearch" Grid.Column="0">
+                <StackPanel Margin="20,0">
+                    <Label Content="Critères de recherche" FontWeight="Bold"  Margin="0,20"/>
+                    <TextBlock Text="Date de début"/>
+                    <DatePicker Name="dp_startDate" />
+                    <TextBlock Text="Date de fin"/>
+                    <DatePicker Name="dp_endDate" />
+                    <TextBlock Text="Type de chambre :"/>
+                    <ComboBox Name="cb_promoRmType" Text="Type de chambre">
+                        <ComboBoxItem Tag="1">Simple</ComboBoxItem>
+                        <ComboBoxItem Tag="2">Double</ComboBoxItem>
+                        <ComboBoxItem Tag="3">Triple</ComboBoxItem>
+                        <ComboBoxItem Tag="4">4 personnes</ComboBoxItem>
+                        <ComboBoxItem Tag="5">6 personnes</ComboBoxItem>
+                        <ComboBoxItem Tag="6">Avec lit bébé</ComboBoxItem>
+                        <ComboBoxItem Tag="7">Avec vue sur le CESI</ComboBoxItem>
+                    </ComboBox>
+                    <Button Name="btn_searchPromo" Click="btn_searchPromo_Click" Content="Rechercher" Margin="0,20"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Name="gr_promoList" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <ListBox Grid.Row="0"  Name="lb_promotions" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel VerticalAlignment="Center">
+                                <Grid Margin="0,5,0,0">
+                                    <StackPanel Height="100" >
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Promotion N° : " Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Name="tb_promoId" Text="{Binding id}" Visibility="Visible"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Date de début : " Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding startDate}" Margin="5,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Date de fin : " Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding endDate}" Margin="5,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Réduction : " Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding discount}" Margin="3,1,0,1"></TextBlock>
+                                            <TextBlock Text="%"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Code promo : " Margin="5,1,0,1"></TextBlock>
+                                            <TextBlock Text="{Binding code}" Margin="3,1,0,1"></TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="btn_cancelPromo" Content="Annuler" Click="btn_cancelPromo_Click" Margin="20,0"/>
+                    <Button Name="btn_modifPromo" Content="Modifier" Click="btn_modifPromo_Click" Margin="20,0"/>
+                </WrapPanel>
+
+            </Grid>
+
+            <Grid Name="gr_newPromo" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <WrapPanel>
+                    <Label Content="Formulaire d'ajout et de modification :" FontWeight="Bold"  Margin="20,20"/>
+                </WrapPanel>
+                <StackPanel VerticalAlignment="Center" Margin="20,0">
+                    <TextBlock Text="Date de début" />
+                    <DatePicker Name="dp_addStartDate" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+                    <TextBlock Text="Date de fin"/>
+                    <DatePicker Name="dp_addEndDate" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+                    <TextBlock Text="Réduction"/>
+                    <TextBox Name="tb_addDiscount"/>
+                    <TextBlock Text="Code promo"/>
+                    <TextBox Name="tb_addCode"/>
+                    <TextBlock Text="Type de chambre"/>
+                    <ComboBox Name="cb_addRmType" Text="Type de chambre">
+                        <ComboBoxItem Tag="1">Simple</ComboBoxItem>
+                        <ComboBoxItem Tag="2">Double</ComboBoxItem>
+                        <ComboBoxItem Tag="3">Triple</ComboBoxItem>
+                        <ComboBoxItem Tag="4">4 personnes</ComboBoxItem>
+                        <ComboBoxItem Tag="5">6 personnes</ComboBoxItem>
+                        <ComboBoxItem Tag="6">Avec lit bébé</ComboBoxItem>
+                        <ComboBoxItem Tag="7">Avec vue sur le CESI</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="btn_editPromo" Content="Modifier" Click="btn_editPromo_Click" Margin="20,0" IsEnabled="False"/>
+                    <Button Name="btn_addPromo" Content="Ajouter" Click="btn_addPromo_Click" Margin="20,0"/>
+                </WrapPanel>
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="gr_custs" Grid.Row="3" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="240*"/>
+                <ColumnDefinition Width="117*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Name="gr_custSearch" Grid.Column="0">
+                <StackPanel Margin="20,0">
+                    <Label Content="Critères de recherche" FontWeight="Bold"  Margin="0,20"/>
+                    <TextBlock Text="Nom ou prénom client"/>
+                    <TextBox Name="tb_custName"/>
+                    <Button Name="btn_srchCust" Content="Rechercher" Click="btn_srchCust_Click" Margin="0,20"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Name="gr_custList" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Name="sp_customersList2" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0">
+                    
+                        <ListView x:Name="lv_customers2" ItemsSource="{Binding Customer}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn DisplayMemberBinding="{Binding id}" Header="id" Width="40"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding lastname}" Header="Nom" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding firstname}" Header="Prénom" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding email}" Header="Email" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding phone}" Header="Téléphone" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding nbReservation}" Header="Nb. réservations" Width="50"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    
+                </Grid>
+
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="btn_modifCust" Content="Modifier" Click="btn_modifCust_Click" Margin="20,0"/>
+                </WrapPanel>
+
+            </Grid>
+
+            <Grid Name="gr_newCust" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <WrapPanel>
+                    <Label Content="Formulaire d'ajout et de modification :" FontWeight="Bold"  Margin="20,20"/>
+                </WrapPanel>
+                <StackPanel VerticalAlignment="Center" Margin="20,0">
+                    <TextBlock Text="Nom" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_lastname2" Margin="20,0"/>
+                    <TextBlock Text="Prénom" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_firstname2" Margin="20,0"/>
+                    <TextBlock Text="Email" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_email2" Margin="20,0"/>
+                    <TextBlock Text="Téléphone" Margin="20,0,20,5"/>
+                    <TextBox Name="tb_phone2" Margin="20,0"/>
+                </StackPanel>
+
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="btn_editCust" Content="Modifier" Click="btn_editCust_Click" Margin="20,0" IsEnabled="False"/>
+                    <Button Name="btn_addCust" Content="Ajouter" Click="btn_addCust_Click" Margin="20,0"/>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Name="gr_actions" Grid.Row="4">
+            <WrapPanel Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Button Name="btn_addMeal"
+                        Content="Demande de repas "
+                        Click="btn_addMeal_Click"
+                        Height="35.2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Foreground="Black"
+                        FontSize="15"
+                        BorderBrush="Transparent"
+                        Visibility="Collapsed"
+                        Margin="5,0" Padding="8,2"/>
+                <Button Name="btn_pdfInvoice"
+                        Content="Génerer Facture"
+                        Click="btn_pdfInvoice_Click"
+                        Height="35.2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Foreground="Black"
+                        FontSize="15"
+                        BorderBrush="Transparent"
+                        Visibility="Collapsed"
+                        Margin="5,0" Padding="8,2"/>
+                <Button Name="btn_cancelChoice"
+                        Content="Retour"
+                        Click="btn_cancelChoice_Click"
+                        Height="35.2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Foreground="Black"
+                        FontSize="15"
+                        BorderBrush="Transparent"
+                        Visibility="Collapsed"
+                        Margin="5,0" Padding="8,2"/>
+                <Button Name="btn_selectRoom" 
+                        Content="Valider le choix" 
+                        Click="btn_selectRoom_Click" 
+                        Visibility="Collapsed"
+                        Background="Orange" Height="35.2"
+                        FontSize="15"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Margin="5,0" Padding="8,2" 
+                        BorderBrush="Transparent"/>
+                <Button Content="Changer la chambre"
+                        Name="btn_changeRoom"
+                        Visibility="Collapsed"
+                        Click="btn_changeRoom_Click"
+                        Background="Orange"
+                        Margin="30,0,30,0"
+                        BorderBrush="Transparent"
+                        VerticalAlignment="Center"
+                        Height="40"/>
+                <Button Name="btn_cancelBook" 
+                        Content="Annuler une réservation"
+                        Click="btn_cancelBook_Click"
+                        Height="35.2" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Foreground="Black"
+                        FontSize="15"  
+                        BorderBrush="Transparent"
+                        Visibility="Collapsed"
+                        Margin="5,0" Padding="8,2"/>
+                <Button Name="btn_modifBook" 
+                        Content="Modifier une réservation" 
+                        Height="35.2" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Margin="5,0" Padding="8,2"
+                        Click="btn_modifBook_Click"
+                        Visibility="Collapsed"
+                        BorderBrush="Transparent"
+                        FontSize="15" />
+                <Button Name="btn_editBook" 
+                        Content="Modifier" 
+                        Click="btn_editBook_Click"
+                        Visibility="Collapsed"
+                        HorizontalAlignment="Center"  
+                        VerticalAlignment="Center"
+                        Height="35.2"
+                        Foreground="Black" 
+                        Background="#33FF00"
+                        FontSize="15" 
+                        Margin="5,0" Padding="8,2"
+                        BorderBrush="Transparent"/>
+                <Button Name="btn_book" 
+                        Content="Réserver" 
+                        Click="btn_book_Click"
+                        Visibility="Collapsed"
+                        HorizontalAlignment="Center"  
+                        VerticalAlignment="Center"
+                        Height="35.2"
+                        Foreground="Black" 
+                        Background="#33FF00"
+                        FontSize="15" 
+                        Margin="5,0" Padding="8,2"
+                        BorderBrush="Transparent"/>
+                <Button Name="btn_toolBook" 
+                        Click="btn_toolBook_Click" 
+                        Content="Effectuer une réservation"
+                        Background="#33FF00" 
+                        FontSize="15" 
+                        Height="35.2"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center"  
+                        BorderBrush="Transparent"
+                        Margin="5,0" Padding="8,2"/>
+            </WrapPanel>
+        </Grid>
+
+    </Grid>
+</Window>

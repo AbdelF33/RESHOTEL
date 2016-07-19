@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.625, 11.25" name="RESHOTEL_DC">
+  <DataContextMoniker Name="/RESHOTEL_DCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a6a94d21-4704-42d6-8ec6-afdffd3c5d71" absoluteBounds="9.125, 5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/bookingOption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62e38400-3026-41c1-831b-f91718d26988" absoluteBounds="9.14, 5.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b462ed1a-fd31-45e2-9e62-3889aceaca23" absoluteBounds="5.625, 3.125, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/staffProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7febfcb3-f138-4dc2-aba5-cf8ece346f17" absoluteBounds="5.64, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6452b0f0-7f63-449f-8f17-d55444cdfed7" absoluteBounds="5.375, 8.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec633ba8-befb-471e-9132-e8eef30dce42" absoluteBounds="5.3900000000000006, 8.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="931704ae-8731-48db-9d69-4b97f335af26" absoluteBounds="12.375, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d984c2b-0858-42c2-bdf1-2183c5c198fb" absoluteBounds="12.39, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="003e95f8-da4f-4096-be97-4d38b1d07dc4" absoluteBounds="2.75, 5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/meal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d10fb1af-beef-4316-ba31-ef701ab80353" absoluteBounds="2.765, 5.4600000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="607e5d84-f113-4f56-8d6a-c66c40de965a" absoluteBounds="9.125, 2.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/option" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab468bde-9b87-48c2-89aa-2a50a8573745" absoluteBounds="9.14, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf8b5776-ca05-452e-a08c-2f964032ca5f" absoluteBounds="2.25, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c10647c2-4413-4a4f-ba7b-8846111c16e2" absoluteBounds="2.265, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="022fc727-763e-44ea-b81d-fd0bf49769a3" absoluteBounds="5.625, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4edbd3f-1f07-4c0c-a708-096eb8a16da7" absoluteBounds="5.6400000000000006, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.125 : 4.0112939453125); (10.125 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/option/option_bookingOption" />
+      <nodes>
+        <classShapeMoniker Id="607e5d84-f113-4f56-8d6a-c66c40de965a" />
+        <classShapeMoniker Id="a6a94d21-4704-42d6-8ec6-afdffd3c5d71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.25 : 3.53449625651042); (5.625 : 3.53449625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/profile/profile_staffProfile" />
+      <nodes>
+        <classShapeMoniker Id="cf8b5776-ca05-452e-a08c-2f964032ca5f" />
+        <classShapeMoniker Id="b462ed1a-fd31-45e2-9e62-3889aceaca23" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.625 : 5.75); (6.625 : 4.5112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/staff/staff_staffProfile" />
+      <nodes>
+        <classShapeMoniker Id="022fc727-763e-44ea-b81d-fd0bf49769a3" />
+        <classShapeMoniker Id="b462ed1a-fd31-45e2-9e62-3889aceaca23" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d5ebcdb2-0927-4be4-bb16-9b82d1362983" absoluteBounds="15.125, 7.375, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/room" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de472c66-5638-4742-9f3e-ae768eb129e5" absoluteBounds="15.14, 7.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b1e8073-0d2e-417a-b0cd-2af4ec07b328" absoluteBounds="13.375, 9.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/payment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b95007b2-6125-4277-8941-3a92cd94fa2e" absoluteBounds="13.39, 10.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" absoluteBounds="8.75, 7.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/booking" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8c94130-a0ed-40d6-8ca9-76ac3903b7b6" absoluteBounds="8.765, 7.9600000000000009, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="072a6cab-354e-4394-9522-871ba66ab16e" absoluteBounds="15.375, 2.625, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/feature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e96b183-4ff9-4330-8e1b-aa5c8c89ce90" absoluteBounds="15.39, 3.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3885ed2-cec8-485c-9db6-4adddf613298" absoluteBounds="12.25, 2.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/promotion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d7f516b-e2b6-4fe1-9980-4576e7ae2d7a" absoluteBounds="12.265, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.25 : 5.1651025390625); (16.25 : 7.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/feature/feature_room" />
+      <nodes>
+        <classShapeMoniker Id="072a6cab-354e-4394-9522-871ba66ab16e" />
+        <classShapeMoniker Id="d5ebcdb2-0927-4be4-bb16-9b82d1362983" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.375 : 3.73159912109375); (14.25 : 3.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/feature/feature_promotion" />
+      <nodes>
+        <classShapeMoniker Id="072a6cab-354e-4394-9522-871ba66ab16e" />
+        <classShapeMoniker Id="e3885ed2-cec8-485c-9db6-4adddf613298" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.9375 : 7.5); (9.9375 : 6.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/booking/booking_bookingOption" />
+      <nodes>
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+        <classShapeMoniker Id="a6a94d21-4704-42d6-8ec6-afdffd3c5d71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.89132206549276); (13.375 : 7.89132206549276); (13.375 : 7.52089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/booking/booking_invoice" />
+      <nodes>
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+        <classShapeMoniker Id="931704ae-8731-48db-9d69-4b97f335af26" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 9.23159912109375); (8.75 : 9.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/customer/customer_booking" />
+      <nodes>
+        <classShapeMoniker Id="6452b0f0-7f63-449f-8f17-d55444cdfed7" />
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.375 : 10.1835034179687); (10.75 : 10.1835034179687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/payment/payment_booking" />
+      <nodes>
+        <classShapeMoniker Id="2b1e8073-0d2e-417a-b0cd-2af4ec07b328" />
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.125 : 8.45986691374229); (10.75 : 8.45986691374229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/room/room_booking" />
+      <nodes>
+        <classShapeMoniker Id="d5ebcdb2-0927-4be4-bb16-9b82d1362983" />
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 6.94314447265625); (8.90625 : 6.94314447265625); (8.90625 : 7.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RESHOTEL_DCDataContext/staff/staff_booking" />
+      <nodes>
+        <classShapeMoniker Id="022fc727-763e-44ea-b81d-fd0bf49769a3" />
+        <classShapeMoniker Id="fb272423-6734-44d6-86c1-ca5b89ecf2f0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ec6ad0f4-f9e0-4152-a119-50e8ed2eca0e" absoluteBounds="2.75, 7.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RESHOTEL_DCDataContext/log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="219782e5-726c-4f80-9ea9-f78a2f7f0cdf" absoluteBounds="2.7649999999999997, 7.5850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

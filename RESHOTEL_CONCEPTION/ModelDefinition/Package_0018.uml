@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="355917ca-7c50-4c51-80bf-ead690f5c960"
+  name="RESHOTEL_APP"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b070fc92-b967-45ac-b88e-3a9fb66ae273"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DRESHOTEL_APP"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="62e854cd-44a1-4f2a-b3d5-a58b4f26d135">
+      <profileInstance
+        Id="5a8801c9-cd89-4628-8ea7-e518175aebf8"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3c2db96f-fbcf-4a19-a05d-0618dd210795"
+        LastKnownName="Model"
+        LastKnownLocation="Package1_0018.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7623feaa-3581-4cb4-bd8d-a23bbc0ee12f"
+        name="booking"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7261505a-9791-4f37-843c-1ad5ebba63cd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3Dbooking"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="67942bff-d0eb-49b2-abec-d2d998516b2e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dd942983-c18e-40a4-ba9d-f4108ae124e3">
+                <propertyInstance
+                  Id="8fcf52d4-25b7-4b5e-9790-c80165808e2d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f8237361-c273-4f56-85f5-39860bd277af">
+                <propertyInstance
+                  Id="09b36128-12f6-455a-97d9-39812bb7cfde"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="efab6bf1-d689-49f8-a8f3-0970472c11b4">
+                <propertyInstance
+                  Id="428cdcd4-9442-42c1-9a6f-d5b80da0b1e0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d5298167-c0ee-4cba-b992-1e2ad0a476ed">
+                <propertyInstance
+                  Id="c1e78393-96ee-4a47-ab9d-938a926f8dfd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fa7afa8b-180a-41b4-b688-b743852bc34e">
+                <propertyInstance
+                  Id="6139ef80-fe00-476c-8b13-c2a4ac5e6a28"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e194a256-5c3d-42f2-911a-02cf48e33586"
+        name="RESHOTEL_DCDataContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c1207e60-68b9-4fba-8aaf-52d54453c093"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3DRESHOTEL_DCDataContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6df06b99-d427-429e-9b06-d2dce2e9aa74"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b8665bc-93f2-43b9-b414-82c803d99cb3">
+                <propertyInstance
+                  Id="1a59aed6-a700-4b4b-9e57-2acb1b7e217c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="da3aaa00-6b3d-4b23-89e2-aaa248d720fb">
+                <propertyInstance
+                  Id="cb1ff645-67f9-463d-b7ac-aa9b98c349d4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74f04c54-f40c-4c35-8452-9c3867c862e3">
+                <propertyInstance
+                  Id="1f709b24-27e3-4dc5-bf80-e9bbe79bfe0b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f835057-f959-45c0-b8f9-2f4c4aece30e">
+                <propertyInstance
+                  Id="a6c26efa-5f37-4c47-a76a-3296933a32c9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a34b32f-eb46-4571-89a1-9e7375cb69ad">
+                <propertyInstance
+                  Id="4156b02b-3bda-4b55-90d4-c5ac201587ea"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="27806cd4-ca21-43a9-a3d1-b9c2e8a3288b"
+        name="customer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a0ab4066-0c85-4738-b0aa-425e8291b21e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3Dcustomer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f9add085-ca74-4c96-bf39-47d41ffba159"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8d6d8b3b-a873-48a1-9954-11f56b5208de">
+                <propertyInstance
+                  Id="f444a0d3-d950-4adc-9cb3-5b0de15f4c78"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d7e397a9-8a46-4d5a-82b0-3e272d76ae59">
+                <propertyInstance
+                  Id="5eed497d-26c0-4c34-a24e-24ebe4e0ceb0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cc6190c5-ed06-4ff2-b5c4-c12be12298aa">
+                <propertyInstance
+                  Id="e111978e-9332-449f-b477-97104d5294c5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="00e0f617-6dd8-4c04-991d-00d370a07a81">
+                <propertyInstance
+                  Id="874e852a-45c0-4184-9090-d283510fb1df"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9371272-9486-47ca-b8b1-2af022650e4d">
+                <propertyInstance
+                  Id="65f99cd6-adf7-4d76-96f4-414c22d96b0e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f2f3ca63-47ba-4868-ad32-e983dd8017c8"
+        name="option"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2f9e2b8c-f732-447b-9057-4bca690c0aea"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3Doption"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f11ea2d5-52c1-444c-90fe-af3ab3f384f2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d729b88-1c04-4916-bedc-c21111cb4a41">
+                <propertyInstance
+                  Id="35d93f8d-8afa-456e-9aa4-57421711164f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3acee4ba-7726-47c8-a3af-09100251a414">
+                <propertyInstance
+                  Id="ba2c5c28-1e51-4544-adb2-1e6bb2fde052"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d3878948-2d25-432b-a6bb-f0c511cef753">
+                <propertyInstance
+                  Id="68497aab-d398-4161-be0a-550ba780046a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f715893-0f73-4212-b1ab-49d4fc807f28">
+                <propertyInstance
+                  Id="17493761-e7af-4df6-b64e-ffcfc4fdda43"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c392159-6033-4720-9153-a863afde6762">
+                <propertyInstance
+                  Id="14ff5f04-7e70-4777-9e77-6565b0d43f25"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="59285faa-2195-4847-b6ca-6e894ae69b12"
+        name="payment"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="24968bc6-c364-4f0f-b63a-593cbd6fd5b3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3Dpayment"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9c699e16-3409-4dbb-baa8-cc67d047709d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3d2c6ec-e3ea-4ed2-ad6f-f1c323e11137">
+                <propertyInstance
+                  Id="f099e887-9579-4c8d-9afe-77364e63d5d1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b980cf5-924c-443c-b494-912e7259b9c2">
+                <propertyInstance
+                  Id="251f0229-6751-4050-989d-f7deea12d6f4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be2c9f7d-7bba-4729-a327-2fec68bde524">
+                <propertyInstance
+                  Id="a2f86a35-7a8e-4a65-9bda-f56910f17b47"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d82d2d18-3b82-4947-abb8-88ec2d79185d">
+                <propertyInstance
+                  Id="88e5c745-32de-4b21-a55b-c723847aae24"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08beba9e-5e40-4457-8e71-33294805f4b1">
+                <propertyInstance
+                  Id="fef49fb5-f197-42d2-a0e0-23726c6007a5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2fb53295-1401-4640-9fce-1c07218d83e1"
+        name="promotion"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9d9b91b6-d9a1-4308-88a7-92b4a3e273da"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FDocuments%2FVisual Studio 2013%2FProjects%2FRESHOTEL%2FRESHOTEL_APP%2Fbin%2FRelease%2FRESHOTEL_APP.exe&quot; Namespace%3DRESHOTEL_APP Type%3Dpromotion"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5324b3eb-b157-4bba-ab0a-2da7207f8c1d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a106a963-e46a-48bc-8479-c0398220e00f">
+                <propertyInstance
+                  Id="cdf3f32c-08e7-4fcc-a194-dcf1d53d0b1c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5702423-6853-42c9-a996-c3eebb1884aa">
+                <propertyInstance
+                  Id="91396723-64c2-47fa-8281-86feb0ff2d9c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e553918c-61b2-4c03-ba07-c75018e4c870">
+                <propertyInstance
+                  Id="652ea98f-a821-4050-b64f-7c7cf8b733b6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e3ffb43-63da-436e-9e02-fcc7a71b56cf">
+                <propertyInstance
+                  Id="408cfbaa-1e18-40dc-b840-fa4b35449936"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb9775a2-4128-4502-8a2b-b6afeafee8fe">
+                <propertyInstance
+                  Id="91f958e2-6b7f-4d10-bd7e-f9255a368c79"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c56e28ab-06a3-4d96-b057-f863bd481595"
+        LastKnownName="Controller"
+        LastKnownLocation="Package_0026.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1f54e206-b224-44da-a842-eac9ea5cd714"
+        LastKnownName="View"
+        LastKnownLocation="Package2_0026.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e6ad5421-da40-4e1b-a832-94da280befa2"
+        LastKnownName="Tools"
+        LastKnownLocation="Package_0027.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
